@@ -8,7 +8,7 @@ v1_router.register(r'users', UsersViewSet, basename='api-v1-users')
 v1_router.register('type', TypeEducationViewSet, basename='api-v1-type')
 v1_router.register(r'faculties/(?P<type_pk>\d+)', FacultiesViewSet, basename='faculties')
 v1_router.register(r'profiles/(?P<type_pk>\d+)/(?P<facultie_pk>\d+)', ProfileEducationViewSet, basename='profiles')
-v1_router.register(r'descriptions/(?P<type_purlk>\d+)/(?P<facultie_pk>\d+)/(?P<profile_pk>\d+)', DataViewSet, basename='descriptions')
+v1_router.register(r'descriptions/(?P<type_pk>\d+)/(?P<facultie_pk>\d+)/(?P<profile_pk>\d+)', DataViewSet, basename='descriptions')
 
 urlpatterns = [
      path('v1/', include(v1_router.urls)),

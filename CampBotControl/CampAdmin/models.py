@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 
 class Users(models.Model):
     user_id = models.BigIntegerField(verbose_name='id telegram', unique=True)
@@ -27,8 +25,10 @@ class Users(models.Model):
 
 class TypeEducation(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Тип обучения')
+
     def __str__(self) -> str:
         return f'{self.name}'
+
     class Meta:
         verbose_name = 'Тип обучения'
         verbose_name_plural = 'Типы обучения'
@@ -36,8 +36,10 @@ class TypeEducation(models.Model):
 
 class Faculties(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Имя Факультета')
+
     def __str__(self) -> str:
         return f'{self.name}'
+
     class Meta:
         verbose_name = 'Факультет'
         verbose_name_plural = 'Факультеты'
@@ -45,12 +47,15 @@ class Faculties(models.Model):
 
 class Profile(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name='Имя направления')
+
     def __str__(self) -> str:
         return f'{self.name}'
+
     class Meta:
         unique_together = ['name']
         verbose_name = 'Профиль'
         verbose_name_plural = 'Профили'
+
 
 class Data(models.Model):
     descriptions = models.TextField(verbose_name='Описание образования')
