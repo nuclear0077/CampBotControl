@@ -9,6 +9,9 @@
 
 Сам клиент для получения данных по API и Бот [CampBot](https://github.com/nuclear0077/CampBot)
 
+## Technology
+Python 3.9, Django 4.1.4, DRF 3.14, AuthToken, PostgreSQL
+
 ## Documentation
 
 ### Как запустить проект:
